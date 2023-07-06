@@ -8,27 +8,21 @@ namespace CoffeeShop
 {
     public class Order
     {
-        public List<Item> ItemList;
+        public List<Item> Items;
 
         public Order()
         {
-            ItemList = new List<Item>();
+            Items = new List<Item>();
         }
 
         public void AddItem(Item item)
         {
-            ItemList.Add(item);
+            Items.Add(item);
         }
-
-        public List<Item> Items()
-        {
-            return ItemList;
-        }
-
         public double Total()
         {
             double total = 0D;
-            foreach(Item item in ItemList)
+            foreach(Item item in Items)
             {
                 total += item.PriceInDollars();
             }
